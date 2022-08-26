@@ -29,4 +29,4 @@ public static class ModuleInitializer
 
 ## Icon
 
-[Pattern](https://thenounproject.com/term/pattern/130185/) designed by [Jonathan Li](https://thenounproject.com/jjjon/) from [The Noun Project](https://thenounproject.com/).
+[Pattern](https://thenounproject.com/term/pattern/1070611/) designed by [Trevor Dsouza](https://thenounproject.com/TDsouza/) from [The Noun Project](https://thenounproject.com/).
