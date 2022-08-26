@@ -3,7 +3,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/ej794va900x9257f?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-SystemJson)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.SystemJson.svg)](https://www.nuget.org/packages/Verify.SystemJson/)
 
-Adds [Verify](https://github.com/VerifyTests/Verify) support for converting SystemJson types.
+Adds [Verify](https://github.com/VerifyTests/Verify) support for converting System.Text.Json types.
 
 
 ## NuGet package
