@@ -3,16 +3,18 @@
 [UsesVerify]
 public class Tests
 {
-    string json = @"{
-  ""short"": {
-    ""original"": ""http://www.foo.com/"",
-    ""short"": ""foo"",
-    ""error"": {
-      ""code"": 0,
-      ""msg"": ""No action taken""
-    }
-  }
-}";
+    string json = """
+        {
+          "short": {
+            "original": "http://www.foo.com/",
+            "short": "foo",
+            "error": {
+              "code": 0,
+              "msg": "No action taken"
+            }
+          }
+        }
+        """;
 
     [Fact]
     public Task TestJsonDocument() =>

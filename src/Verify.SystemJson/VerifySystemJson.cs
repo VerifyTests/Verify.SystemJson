@@ -2,7 +2,9 @@
 
 public static class VerifySystemJson
 {
-    public static void Enable() =>
+    public static void Enable()
+    {
+        InnerVerifier.ThrowIfVerifyHasBeenRun();
         VerifierSettings
             .AddExtraSettings(_ =>
             {
@@ -11,4 +13,5 @@ public static class VerifySystemJson
                 converters.Add(new JsonDocumentConverter());
                 converters.Add(new JsonPropertyConverter());
             });
+    }
 }
