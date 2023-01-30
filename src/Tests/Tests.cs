@@ -23,4 +23,15 @@ public class Tests
     [Fact]
     public Task TestJsonElement() =>
         Verify(JsonDocument.Parse(json).RootElement);
+
+    [Fact]
+    public Task NullValue() =>
+        Verify(JsonDocument.Parse("""
+        {
+          "short": {
+            "a": null,
+            "error": "a"
+          }
+        }
+        """));
 }

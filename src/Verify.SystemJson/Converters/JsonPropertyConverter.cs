@@ -4,6 +4,13 @@
     public override void Write(VerifyJsonWriter writer, JsonProperty value)
     {
         writer.WritePropertyName(value.Name);
-        writer.Serialize(value.Value);
+        if (value.Value.ValueKind == JsonValueKind.Null)
+        {
+            writer.WriteNull();
+        }
+        else
+        {
+            writer.Serialize(value.Value);
+        }
     }
 }
