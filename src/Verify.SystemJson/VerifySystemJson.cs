@@ -2,8 +2,19 @@
 
 public static class VerifySystemJson
 {
-    public static void Enable()
+    [Obsolete("Use Initialize")]
+    public static void Enable() =>
+        Initialize();
+
+    public static bool Initialized { get; private set; }
+
+    public static void Initialize()
     {
+        if (Initialized)
+        {
+            throw new("Already Initialized");
+        }
+
         InnerVerifier.ThrowIfVerifyHasBeenRun();
         VerifierSettings
             .AddExtraSettings(_ =>
