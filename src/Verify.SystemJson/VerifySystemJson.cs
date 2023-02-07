@@ -14,7 +14,7 @@ public static class VerifySystemJson
         {
             throw new("Already Initialized");
         }
-        Initialized = true
+        Initialized = true;
 
         InnerVerifier.ThrowIfVerifyHasBeenRun();
         VerifierSettings
