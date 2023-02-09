@@ -1,5 +1,6 @@
 # <img src="/src/icon.png" height="30px"> Verify.SystemJson
 
+[![Discussions](https://img.shields.io/badge/Verify-Discussions-yellow?svg=true&label=)](https://github.com/orgs/VerifyTests/discussions)
 [![Build status](https://ci.appveyor.com/api/projects/status/ej794va900x9257f?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-SystemJson)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.SystemJson.svg)](https://www.nuget.org/packages/Verify.SystemJson/)
 
