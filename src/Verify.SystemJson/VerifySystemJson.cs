@@ -14,13 +14,9 @@ public static class VerifySystemJson
         Initialized = true;
 
         InnerVerifier.ThrowIfVerifyHasBeenRun();
-        VerifierSettings
-            .AddExtraSettings(_ =>
-            {
-                var converters = _.Converters;
-                converters.Add(new JsonElementConverter());
-                converters.Add(new JsonDocumentConverter());
-                converters.Add(new JsonPropertyConverter());
-            });
+        var converters = Argon.DefaultContractResolver.Converters;
+        converters.Add(new JsonElementConverter());
+        converters.Add(new JsonDocumentConverter());
+        converters.Add(new JsonPropertyConverter());
     }
 }
