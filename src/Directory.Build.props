@@ -2,6 +2,7 @@
 <Project>
   <PropertyGroup>
     <Version>1.1.3</Version>
+    <LangVersion>preview</LangVersion>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <PackageTags>NodaTime, Verify</PackageTags>
     <Description>Adds Verify (https://github.com/VerifyTests/Verify) support for converting System.Text.Json</Description>
