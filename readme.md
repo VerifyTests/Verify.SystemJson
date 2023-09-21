@@ -6,6 +6,8 @@
 
 Adds [Verify](https://github.com/VerifyTests/Verify) support for converting System.Text.Json types.
 
+**See [Milestones](../../milestones?state=closed) for release notes.**
+
 
 ## NuGet package
 
