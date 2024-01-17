@@ -1,6 +1,5 @@
 ﻿using System.Text.Json;
 
-[UsesVerify]
 public class Tests
 {
     string json = """
