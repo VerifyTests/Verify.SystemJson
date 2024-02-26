@@ -7,8 +7,8 @@
     <PackageReference Include="Argon" Version="0.17.0" />
     <PackageReference Include="System.Text.Json" Version="8.0.2" />
     <PackageReference Include="Verify" Version="23.2.1" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.110" PrivateAssets="all" />
-    <PackageReference Include="Polyfill" Version="2.6.5" PrivateAssets="all" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.111" PrivateAssets="all" />
+    <PackageReference Include="Polyfill" Version="3.0.0" PrivateAssets="all" />
     <Using Include="System.Text.Json" />
   </ItemGroup>
 </Project>
