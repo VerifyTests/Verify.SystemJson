@@ -7,7 +7,7 @@
     <PackageReference Include="System.Text.Json" Version="8.0.3" />
     <PackageReference Include="Verify" Version="24.1.0" />
     <PackageReference Include="ProjectDefaults" Version="1.0.127" PrivateAssets="all" />
-    <PackageReference Include="Polyfill" Version="5.2.1" PrivateAssets="all" />
+    <PackageReference Include="Polyfill" Version="5.2.2" PrivateAssets="all" />
     <Using Include="System.Text.Json" />
   </ItemGroup>
 </Project>
