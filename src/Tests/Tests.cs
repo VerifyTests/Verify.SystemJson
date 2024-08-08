@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using System.Text.Json.Nodes;
 
 public class Tests
 {
@@ -22,6 +23,14 @@ public class Tests
     [Fact]
     public Task TestJsonElement() =>
         Verify(JsonDocument.Parse(json).RootElement);
+
+    [Fact]
+    public Task TestJsonNode() =>
+        Verify(JsonNode.Parse(json));
+
+    [Fact]
+    public Task TestJsonObject() =>
+        Verify(JsonNode.Parse(json)!.AsObject());
 
     [Fact]
     public Task NullValue() =>
