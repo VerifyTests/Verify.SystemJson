@@ -21,6 +21,7 @@ public static class VerifySystemJson
                 converters.Add(new JsonElementConverter());
                 converters.Add(new JsonDocumentConverter());
                 converters.Add(new JsonPropertyConverter());
+                converters.Add(new JsonNodeConverter());
             });
     }
 }
