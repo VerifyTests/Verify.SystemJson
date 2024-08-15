@@ -7,7 +7,5 @@
     <PackageReference Include="Verify" />
     <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
     <PackageReference Include="Polyfill" PrivateAssets="all" />
-    <Using Include="System.Text.Json" />
-    <Using Include="System.Text.Json.Nodes" />
   </ItemGroup>
 </Project>
