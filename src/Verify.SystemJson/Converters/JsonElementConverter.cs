@@ -1,4 +1,4 @@
-﻿class JsonElementConverter :
+class JsonElementConverter :
     WriteOnlyJsonConverter<JsonElement>
 {
     public override void Write(VerifyJsonWriter writer, JsonElement value)
@@ -25,7 +25,17 @@
                 writer.WriteValue(value.GetString());
                 break;
             case JsonValueKind.Number:
-                writer.WriteValue(value.GetDouble());
+                {
+                    if (value.TryGetInt64(out var valueAsLong))
+                    {
+                        writer.WriteValue(valueAsLong);
+                    }
+                    else
+                    {
+                        writer.WriteValue(value.GetDouble());
+                    }
+                }
+
                 break;
             case JsonValueKind.True:
                 writer.WriteValue(true);
