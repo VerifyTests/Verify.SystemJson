@@ -1,4 +1,4 @@
-﻿public class Tests
+public class Tests
 {
     string json = """
         {
@@ -37,6 +37,15 @@
             "a": null,
             "error": "a"
           }
+        }
+        """));
+
+    [Fact]
+    public Task Numbers() =>
+        Verify(JsonDocument.Parse("""
+        {
+            "int": 1,
+            "double": 4.4
         }
         """));
 }
