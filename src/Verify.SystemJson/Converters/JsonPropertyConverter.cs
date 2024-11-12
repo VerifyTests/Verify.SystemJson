@@ -1,16 +1,17 @@
 ﻿class JsonPropertyConverter :
     WriteOnlyJsonConverter<JsonProperty>
 {
-    public override void Write(VerifyJsonWriter writer, JsonProperty value)
+    public override void Write(VerifyJsonWriter writer, JsonProperty property)
     {
-        writer.WritePropertyName(value.Name);
-        if (value.Value.ValueKind == JsonValueKind.Null)
+        var value = property.Value;
+        var name = property.Name;
+        if (value.ValueKind == JsonValueKind.Null)
         {
-            writer.WriteNull();
+            writer.WriteMember(property, null, name);
         }
         else
         {
-            writer.Serialize(value.Value);
+            writer.WriteMember(property, value, name);
         }
     }
 }

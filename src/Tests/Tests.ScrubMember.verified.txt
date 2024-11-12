@@ -1,0 +1,7 @@
+﻿{
+  short: {
+    original: http://www.foo.com/,
+    short: foo,
+    error: Scrubbed
+  }
+}

@@ -18,6 +18,10 @@ public class Tests
         Verify(JsonDocument.Parse(json));
 
     [Fact]
+    public Task ScrubMember() =>
+        Verify(JsonDocument.Parse(json)).ScrubMember("error");
+
+    [Fact]
     public Task TestJsonElement() =>
         Verify(JsonDocument.Parse(json).RootElement);
 
