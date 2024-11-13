@@ -1,3 +1,5 @@
+using Argon;
+
 public class Tests
 {
     string json = """
@@ -36,15 +38,21 @@ public class Tests
     [Fact]
     public Task NullValue() =>
         Verify(
-            JsonDocument.Parse(
-                """
+                JsonDocument.Parse(
+                    """
+                    {
+                      "short": {
+                        "a": null,
+                        "error": "a"
+                      }
+                    }
+                    """))
+            .AddExtraSettings(
+                _ =>
                 {
-                  "short": {
-                    "a": null,
-                    "error": "a"
-                  }
-                }
-                """));
+                    _.DefaultValueHandling = DefaultValueHandling.Include;
+                    _.NullValueHandling = NullValueHandling.Include;
+                });
 
     [Fact]
     public Task Numbers() =>
