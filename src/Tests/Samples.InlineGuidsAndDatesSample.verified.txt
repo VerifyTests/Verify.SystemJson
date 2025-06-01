@@ -1,0 +1,10 @@
+﻿{
+  node: {
+    date: Date_1,
+    short: foo Date_1,
+    error: {
+      guid: Guid_1,
+      msg: No action taken Guid_1
+    }
+  }
+}

@@ -1,5 +1,4 @@
-using Argon;
-
+[TestFixture]
 public class Tests
 {
     string json = """
@@ -15,27 +14,27 @@ public class Tests
                   }
                   """;
 
-    [Fact]
+    [Test]
     public Task TestJsonDocument() =>
         Verify(JsonDocument.Parse(json));
 
-    [Fact]
+    [Test]
     public Task ScrubMember() =>
         Verify(JsonDocument.Parse(json)).ScrubMember("error");
 
-    [Fact]
+    [Test]
     public Task TestJsonElement() =>
         Verify(JsonDocument.Parse(json).RootElement);
 
-    [Fact]
+    [Test]
     public Task TestJsonNode() =>
         Verify(JsonNode.Parse(json));
 
-    [Fact]
+    [Test]
     public Task TestJsonObject() =>
         Verify(JsonNode.Parse(json)!.AsObject());
 
-    [Fact]
+    [Test]
     public Task NullValue() =>
         Verify(
                 JsonDocument.Parse(
@@ -54,7 +53,7 @@ public class Tests
                     _.NullValueHandling = NullValueHandling.Include;
                 });
 
-    [Fact]
+    [Test]
     public Task Numbers() =>
         Verify(
             JsonDocument.Parse(
