@@ -60,7 +60,7 @@ public class Samples
             """
             {
               "node": {
-                "date": "1/10/2023",
+                "date": "10/01/2023",
                 "short": "foo",
                 "error": {
                   "guid": "123e4567-e89b-12d3-a456-426614174000",
@@ -84,8 +84,8 @@ public class Samples
             """
             {
               "node": {
-                "date": "01/10/2023",
-                "short": "foo 01/10/2023",
+                "date": "2023/10/01",
+                "short": "foo 2023/10/01",
                 "error": {
                   "guid": "123e4567-e89b-12d3-a456-426614174000",
                   "msg": "No action taken 123e4567-e89b-12d3-a456-426614174000"
@@ -96,7 +96,7 @@ public class Samples
 
         var document = JsonDocument.Parse(json);
         return Verify(document)
-            .ScrubInlineDates("dd/MM/yyyy")
+            .ScrubInlineDates("yyyy/MM/dd")
             .ScrubInlineGuids();
     }
 
