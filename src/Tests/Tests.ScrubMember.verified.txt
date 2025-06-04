@@ -2,6 +2,11 @@
   short: {
     original: http://www.foo.com/,
     short: foo,
-    error: Scrubbed
+    error: Scrubbed,
+    cars: [
+      Ford,
+      BMW,
+      Fiat
+    ]
   }
 }
