@@ -10,7 +10,8 @@ public class Tests
                         "code": 0,
                         "msg": "No action taken"
                       },
-                      "cars": ["Ford", "BMW", "Fiat"]
+                      "cars": ["Ford", "BMW", "Fiat"],
+                      "bool": true
                     }
                   }
                   """;
