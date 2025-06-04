@@ -25,6 +25,7 @@ public class Samples
     }
 
     #endregion
+
     #region ScrubIgnoreMember
 
     [Test]
@@ -51,6 +52,7 @@ public class Samples
     }
 
     #endregion
+
     #region GuidsAndDates
 
     [Test]
@@ -75,6 +77,7 @@ public class Samples
     }
 
     #endregion
+
     #region InlineGuidsAndDates
 
     [Test]

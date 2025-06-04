@@ -171,7 +171,7 @@ public Task ScrubIgnoreMemberSample()
         .IgnoreMember("msg");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L28-L53' title='Snippet source file'>snippet source</a> | <a href='#snippet-ScrubIgnoreMember' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L29-L54' title='Snippet source file'>snippet source</a> | <a href='#snippet-ScrubIgnoreMember' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -221,7 +221,7 @@ public Task GuidsAndDatesSample()
     return Verify(document);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L54-L77' title='Snippet source file'>snippet source</a> | <a href='#snippet-GuidsAndDates' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L56-L79' title='Snippet source file'>snippet source</a> | <a href='#snippet-GuidsAndDates' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -274,7 +274,7 @@ public Task InlineGuidsAndDatesSample()
         .ScrubInlineGuids();
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L78-L103' title='Snippet source file'>snippet source</a> | <a href='#snippet-InlineGuidsAndDates' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L81-L106' title='Snippet source file'>snippet source</a> | <a href='#snippet-InlineGuidsAndDates' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
