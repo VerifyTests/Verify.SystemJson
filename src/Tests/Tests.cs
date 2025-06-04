@@ -11,7 +11,8 @@ public class Tests
                         "msg": "No action taken"
                       },
                       "cars": ["Ford", "BMW", "Fiat"],
-                      "bool": true
+                      "bool": true,
+                      "decimal": 4.2,
                     }
                   }
                   """;
