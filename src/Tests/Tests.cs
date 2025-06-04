@@ -15,6 +15,17 @@ public class Tests
                   """;
 
     [Test]
+    public Task Quotes()
+    {
+        var json = """
+                   {
+                     "key": "\"value\""
+                   }
+                   """;
+        return Verify(JsonDocument.Parse(json));
+    }
+
+    [Test]
     public Task TestJsonDocument() =>
         Verify(JsonDocument.Parse(json));
 
