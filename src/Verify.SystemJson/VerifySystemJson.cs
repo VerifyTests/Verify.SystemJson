@@ -18,6 +18,8 @@ public static class VerifySystemJson
             .AddExtraSettings(_ =>
             {
                 var converters = _.Converters;
+                converters.Add(new JsonValueConverter());
+                converters.Add(new JsonArrayConverter());
                 converters.Add(new JsonObjectConverter());
                 converters.Add(new JsonElementConverter());
                 converters.Add(new JsonDocumentConverter());
