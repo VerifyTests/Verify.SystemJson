@@ -26,6 +26,17 @@ public class Tests
     }
 
     [Test]
+    public Task UnicodeQuotes()
+    {
+        var json = """
+                   {
+                     "key": "\u0022value\u0022"
+                   }
+                   """;
+        return Verify(JsonDocument.Parse(json));
+    }
+
+    [Test]
     public Task TestJsonDocument() =>
         Verify(JsonDocument.Parse(json));
 
