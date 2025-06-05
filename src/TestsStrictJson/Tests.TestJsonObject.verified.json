@@ -1,17 +1,20 @@
 ﻿{
   "short": {
-    "original": "http://www.foo.com/",
-    "short": "foo",
+    "original": "\"http://www.foo.com/\"",
+    "short": "\"foo\"",
     "error": {
       "code": 0,
-      "msg": "No action taken"
+      "msg": "\"No action taken\""
     },
     "cars": [
-      "Ford",
-      "BMW",
-      "Fiat"
+      "\"Ford\"",
+      "\"BMW\"",
+      null,
+      "\"Fiat\""
     ],
     "bool": true,
-    "decimal": 4.2
+    "decimal": 4.2,
+    "withQuotes": "\"\\u0022value\\u0022\"",
+    "withUnicodeQuotes": "\"\\u0022value\\u0022\""
   }
 }

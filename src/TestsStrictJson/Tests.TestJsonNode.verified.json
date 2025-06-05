@@ -9,9 +9,12 @@
     "cars": [
       "Ford",
       "BMW",
+      null,
       "Fiat"
     ],
     "bool": true,
-    "decimal": 4.2
+    "decimal": 4.2,
+    "withQuotes": "\"value\"",
+    "withUnicodeQuotes": "\"value\""
   }
 }

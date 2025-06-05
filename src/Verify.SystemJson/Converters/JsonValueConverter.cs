@@ -1,4 +1,7 @@
-﻿class JsonValueConverter :
+﻿using System.Text.Encodings.Web;
+using System.Text.Unicode;
+
+class JsonValueConverter :
     WriteOnlyJsonConverter<JsonValue>
 {
     public override void Write(VerifyJsonWriter writer, JsonValue value)
@@ -13,7 +16,16 @@
                 writer.Serialize(value.AsArray());
                 break;
             case JsonValueKind.String:
-                writer.WriteValue(value.ToJsonString());
+                var type = value.GetType();
+                if(type.Name == "JsonValueOfElement")
+                {
+                    // This is a JsonValue<JsonElement>
+                    // We need to extract the JsonElement and write it
+                    var jsonElement = (JsonElement)type.GetField("Value", BindingFlags.Instance | BindingFlags.NonPublic)!.GetValue(value)!;
+                    writer.WriteValue(jsonElement.GetRawText());
+                    return;
+                }
+                writer.WriteValue(readOnlySpan);
                 break;
             case JsonValueKind.Number:
                 if (value.TryGetValue<int>(out var valueAsLong))
