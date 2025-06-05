@@ -16,8 +16,8 @@
                 var type = value.GetType();
                 if (type.Name == "JsonValueOfElement")
                 {
-                    var element = (JsonElement) type.GetField("Value", BindingFlags.Instance | BindingFlags.NonPublic)!.GetValue(value)!;
-                    writer.Serialize(element);
+                    var jsonElement = value.GetValue<JsonElement>();
+                    writer.Serialize(jsonElement);
                     return;
                 }
 
