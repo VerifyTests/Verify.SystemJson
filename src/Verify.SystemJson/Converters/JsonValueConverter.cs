@@ -13,7 +13,7 @@
                 writer.Serialize(value.AsArray());
                 break;
             case JsonValueKind.String:
-                writer.WriteValue(value.GetValue<string>());
+                writer.WriteValue(value.ToJsonString());
                 break;
             case JsonValueKind.Number:
                 if (value.TryGetValue<int>(out var valueAsLong))
