@@ -231,7 +231,7 @@ Results in:
 ```txt
 {
   node: {
-    date: 10/01/2023,
+    date: 2023/10/01,
     short: foo,
     error: {
       guid: Guid_1,
@@ -274,7 +274,7 @@ public Task InlineGuidsAndDatesSample()
         .ScrubInlineGuids();
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L81-L106' title='Snippet source file'>snippet source</a> | <a href='#snippet-InlineGuidsAndDates' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L83-L108' title='Snippet source file'>snippet source</a> | <a href='#snippet-InlineGuidsAndDates' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:

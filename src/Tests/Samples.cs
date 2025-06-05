@@ -77,7 +77,9 @@ public class Samples
     }
 
     #endregion
+
 #if NET8_0_OR_GREATER
+
     #region InlineGuidsAndDates
 
     [Test]
@@ -104,5 +106,6 @@ public class Samples
     }
 
     #endregion
+
 #endif
 }
