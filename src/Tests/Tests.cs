@@ -3,9 +3,19 @@ public class Tests
 {
     string json = """
                   {
-
-                      "withQuotes": "\"valueWithQuotes\"",
-                      "withUnicodeQuotes": "\u0022valueWithUnicodeQuotes\u0022"
+                    "short": {
+                      "original": "http://www.foo.com/",
+                      "short": "foo",
+                      "error": {
+                        "code": 0,
+                        "msg": "No action taken"
+                      },
+                      "cars": ["Ford", "BMW", "Fiat"],
+                      "bool": true,
+                      "decimal": 4.2,
+                      "withQuotes": "\"value\"",
+                      "withUnicodeQuotes": "\u0022value\u0022"
+                    }
                   }
                   """;
 
