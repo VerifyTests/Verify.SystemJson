@@ -231,7 +231,7 @@ Results in:
 ```txt
 {
   node: {
-    date: 10/01/2023,
+    date: 2023/10/01,
     short: foo,
     error: {
       guid: Guid_1,
