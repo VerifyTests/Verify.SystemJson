@@ -225,12 +225,11 @@ public Task GuidsSample()
 
 Results in:
 
-<!-- snippet: Samples.GuidsAndDatesSample.verified.txt -->
-<a id='snippet-Samples.GuidsAndDatesSample.verified.txt'></a>
+<!-- snippet: Samples.GuidsSample.verified.txt -->
+<a id='snippet-Samples.GuidsSample.verified.txt'></a>
 ```txt
 {
   node: {
-    date: 2023/10/01,
     short: foo,
     error: {
       guid: Guid_1,
@@ -239,7 +238,7 @@ Results in:
   }
 }
 ```
-<sup><a href='/src/Tests/Samples.GuidsAndDatesSample.verified.txt#L1-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.GuidsAndDatesSample.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.GuidsSample.verified.txt#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.GuidsSample.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 

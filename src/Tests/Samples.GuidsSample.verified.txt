@@ -1,6 +1,5 @@
 ﻿{
   node: {
-    date: 2023/10/01,
     short: foo,
     error: {
       guid: Guid_1,
