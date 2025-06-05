@@ -53,16 +53,15 @@ public class Samples
 
     #endregion
 
-    #region GuidsAndDates
+    #region Guids
 
     [Test]
-    public Task GuidsAndDatesSample()
+    public Task GuidsSample()
     {
         var json =
             """
             {
               "node": {
-                "date": "2023/10/01",
                 "short": "foo",
                 "error": {
                   "guid": "123e4567-e89b-12d3-a456-426614174000",
