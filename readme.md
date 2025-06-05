@@ -193,21 +193,20 @@ Results in:
 <!-- endSnippet -->
 
 
-### Dates and Guid scrubbing
+### Guid scrubbing
 
-Json values that map to known date and time formats are scrubbed. See [Guids scrubbing](https://github.com/VerifyTests/Verify/blob/main/docs/guids.md) and [Date scrubbing](https://github.com/VerifyTests/Verify/blob/main/docs/dates.md)
+Json values that map to known guid formats are scrubbed. See [Guids scrubbing](https://github.com/VerifyTests/Verify/blob/main/docs/guids.md)
 
-<!-- snippet: GuidsAndDates -->
-<a id='snippet-GuidsAndDates'></a>
+<!-- snippet: Guids -->
+<a id='snippet-Guids'></a>
 ```cs
 [Test]
-public Task GuidsAndDatesSample()
+public Task GuidsSample()
 {
     var json =
         """
         {
           "node": {
-            "date": "2023/10/01",
             "short": "foo",
             "error": {
               "guid": "123e4567-e89b-12d3-a456-426614174000",
@@ -221,7 +220,7 @@ public Task GuidsAndDatesSample()
     return Verify(document);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L56-L79' title='Snippet source file'>snippet source</a> | <a href='#snippet-GuidsAndDates' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L56-L78' title='Snippet source file'>snippet source</a> | <a href='#snippet-Guids' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -274,7 +273,7 @@ public Task InlineGuidsAndDatesSample()
         .ScrubInlineGuids();
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L83-L108' title='Snippet source file'>snippet source</a> | <a href='#snippet-InlineGuidsAndDates' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L82-L107' title='Snippet source file'>snippet source</a> | <a href='#snippet-InlineGuidsAndDates' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
