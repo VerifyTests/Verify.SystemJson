@@ -3,7 +3,8 @@ class JsonElementConverter :
 {
     public override void Write(VerifyJsonWriter writer, JsonElement value)
     {
-        switch (value.ValueKind)
+        var kind = value.ValueKind;
+        switch (kind)
         {
             case JsonValueKind.Object:
                 writer.WriteStartObject();
@@ -11,6 +12,7 @@ class JsonElementConverter :
                 {
                     writer.Serialize(item);
                 }
+
                 writer.WriteEndObject();
                 break;
             case JsonValueKind.Array:
@@ -19,21 +21,20 @@ class JsonElementConverter :
                 {
                     writer.Serialize(item);
                 }
+
                 writer.WriteEndArray();
                 break;
             case JsonValueKind.String:
                 writer.WriteValue(value.GetString());
                 break;
             case JsonValueKind.Number:
+                if (value.TryGetInt64(out var valueAsLong))
                 {
-                    if (value.TryGetInt64(out var valueAsLong))
-                    {
-                        writer.WriteValue(valueAsLong);
-                    }
-                    else
-                    {
-                        writer.WriteValue(value.GetDouble());
-                    }
+                    writer.WriteValue(valueAsLong);
+                }
+                else
+                {
+                    writer.WriteValue(value.GetDouble());
                 }
 
                 break;
@@ -46,7 +47,7 @@ class JsonElementConverter :
             case JsonValueKind.Null:
                 break;
             default:
-                throw new ArgumentOutOfRangeException();
+                throw new($"Unsupported JsonValueKind: {kind}");
         }
     }
 }
