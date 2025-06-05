@@ -12,32 +12,12 @@ public class Tests
                       },
                       "cars": ["Ford", "BMW", "Fiat"],
                       "bool": true,
-                      "decimal": 4.2
+                      "decimal": 4.2,
+                      "withQuotes": "\"value\"",
+                      "withUnicodeQuotes": "\u0022value\u0022"
                     }
                   }
                   """;
-
-    [Test]
-    public Task Quotes()
-    {
-        var json = """
-                   {
-                     "key": "\"value\""
-                   }
-                   """;
-        return Verify(JsonDocument.Parse(json));
-    }
-
-    [Test]
-    public Task UnicodeQuotes()
-    {
-        var json = """
-                   {
-                     "key": "\u0022value\u0022"
-                   }
-                   """;
-        return Verify(JsonDocument.Parse(json));
-    }
 
     [Test]
     public Task TestJsonDocument() =>
@@ -52,8 +32,11 @@ public class Tests
         Verify(JsonDocument.Parse(json).RootElement);
 
     [Test]
-    public Task TestJsonNode() =>
-        Verify(JsonNode.Parse(json));
+    public Task TestJsonNode()
+    {
+        var jsonNode = JsonNode.Parse(json);
+        return Verify(jsonNode);
+    }
 
     [Test]
     public Task TestJsonObject() =>
