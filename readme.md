@@ -207,7 +207,7 @@ public Task GuidsAndDatesSample()
         """
         {
           "node": {
-            "date": "10/01/2023",
+            "date": "2023/10/01",
             "short": "foo",
             "error": {
               "guid": "123e4567-e89b-12d3-a456-426614174000",
@@ -231,7 +231,7 @@ Results in:
 ```txt
 {
   node: {
-    date: Date_1,
+    date: 10/01/2023,
     short: foo,
     error: {
       guid: Guid_1,

@@ -12,7 +12,7 @@ public class Tests
                       },
                       "cars": ["Ford", "BMW", "Fiat"],
                       "bool": true,
-                      "decimal": 4.2,
+                      "decimal": 4.2
                     }
                   }
                   """;
