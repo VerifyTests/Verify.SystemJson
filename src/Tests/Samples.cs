@@ -62,7 +62,7 @@ public class Samples
             """
             {
               "node": {
-                "date": "10/01/2023",
+                "date": "2023/10/01",
                 "short": "foo",
                 "error": {
                   "guid": "123e4567-e89b-12d3-a456-426614174000",
@@ -77,6 +77,8 @@ public class Samples
     }
 
     #endregion
+
+#if NET8_0_OR_GREATER
 
     #region InlineGuidsAndDates
 
@@ -104,4 +106,6 @@ public class Samples
     }
 
     #endregion
+
+#endif
 }
