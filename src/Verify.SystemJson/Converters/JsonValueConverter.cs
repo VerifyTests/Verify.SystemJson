@@ -13,6 +13,14 @@
                 writer.Serialize(value.AsArray());
                 break;
             case JsonValueKind.String:
+                var type = value.GetType();
+                if (type.Name == "JsonValueOfElement")
+                {
+                    var jsonElement = value.GetValue<JsonElement>();
+                    writer.Serialize(jsonElement);
+                    return;
+                }
+
                 writer.WriteValue(value.GetValue<string>());
                 break;
             case JsonValueKind.Number:
@@ -24,6 +32,7 @@
                 {
                     writer.WriteValue(value.GetValue<double>());
                 }
+
                 break;
             case JsonValueKind.True:
                 writer.WriteValue(true);

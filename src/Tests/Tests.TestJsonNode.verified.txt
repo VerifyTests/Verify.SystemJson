@@ -12,6 +12,8 @@
       Fiat
     ],
     bool: true,
-    decimal: 4.2
+    decimal: 4.2,
+    withQuotes: \"value\",
+    withUnicodeQuotes: \u0022value\u0022
   }
 }
