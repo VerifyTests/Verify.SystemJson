@@ -25,9 +25,7 @@ class JsonElementConverter :
                 writer.WriteEndArray();
                 break;
             case JsonValueKind.String:
-                var rawText = value.GetRawText();
-                // Remove quotes
-                writer.WriteValue(rawText.AsSpan().Slice(1, rawText.Length-2));
+                writer.WriteValue(value.GetString());
                 break;
             case JsonValueKind.Number:
                 if (value.TryGetInt64(out var valueAsLong))

@@ -1,3 +1,8 @@
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
+using NUnit.Framework.Legacy;
+using JsonSerializer = System.Text.Json.JsonSerializer;
+
 [TestFixture]
 public class Tests
 {
@@ -19,9 +24,44 @@ public class Tests
                   }
                   """;
 
+#pragma warning disable CA1869
     [Test]
-    public Task TestJsonDocument() =>
-        Verify(JsonDocument.Parse(json));
+    public void EncodingTest()
+    {
+        var value = new
+        {
+            value = "\""
+        };
+        json = JsonSerializer.Serialize(value);
+        ClassicAssert.AreEqual(
+            """
+            {
+              "value": "\u0022"
+            }
+            """,
+            json);
+    }
+    [Test]
+    public void EncodingWithRelaxedTest()
+    {
+        var options = new JsonSerializerOptions
+        {
+            Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+            WriteIndented = true
+        };
+        var value = new
+        {
+            value = "\""
+        };
+        json = JsonSerializer.Serialize(value, options);
+        ClassicAssert.AreEqual(
+            """
+            {
+              "value": "\""
+            }
+            """,
+            json);
+    }
 
     [Test]
     public Task ScrubMember() =>

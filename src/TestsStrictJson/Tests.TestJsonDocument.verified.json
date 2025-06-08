@@ -13,7 +13,7 @@
     ],
     "bool": true,
     "decimal": 4.2,
-    "withQuotes": "\\\"value\\\"",
-    "withUnicodeQuotes": "\\u0022value\\u0022"
+    "withQuotes": "\"value\"",
+    "withUnicodeQuotes": "\"value\""
   }
 }
