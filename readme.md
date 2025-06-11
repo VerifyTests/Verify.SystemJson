@@ -9,6 +9,16 @@ Adds [Verify](https://github.com/VerifyTests/Verify) support for converting Syst
 **See [Milestones](../../milestones?state=closed) for release notes.**
 
 
+## Sponsors
+
+
+### Entity Framework Extensions<!-- include: zzz. path: /docs/zzz.include.md -->
+
+[Entity Framework Extensions](https://entityframework-extensions.net/) is a major sponsor and is proud to contribute to the development this project.
+
+[![Entity Framework Extensions](docs/zzz.png)](https://entityframework-extensions.net)<!-- endInclude -->
+
+
 ## NuGet
 
  * https://nuget.org/packages/Verify.SystemJson
