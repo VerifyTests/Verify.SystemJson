@@ -9,9 +9,9 @@ Adds [Verify](https://github.com/VerifyTests/Verify) support for converting Syst
 **See [Milestones](../../milestones?state=closed) for release notes.**
 
 
-## NuGet package
+## NuGet
 
-https://nuget.org/packages/Verify.SystemJson/
+ * https://nuget.org/packages/Verify.SystemJson
 
 
 ## Usage
