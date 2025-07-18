@@ -1,0 +1,1 @@
+Adds [Verify](https://github.com/VerifyTests/Verify) support for converting System.Text.Json types.
